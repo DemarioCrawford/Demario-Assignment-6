@@ -9,6 +9,7 @@ public class TeslaSalesApplication {
 
 	public static void main(String[] args) {
 		// integrate the file service in main class
+		//create an instance
 		FileService fileService = new FileService();
 
 		// this is where I usually go wrong and cannot read the files properly...
@@ -23,7 +24,7 @@ public class TeslaSalesApplication {
 			printReport("Model 3", model3Data);
 			printReport("Model S", modelSData);
 			printReport("Model X", modelXData);
-			// Here I had to handle my own IOException
+			// here I had to handle my own IOException
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -49,7 +50,7 @@ public class TeslaSalesApplication {
 				+ worstMonth.map(report -> report.getDate().toString()).orElse("N/A"));
 		System.out.println("--------------------");
 	}
-
+	//methods for finding best and worst months
 	private static Optional<SalesData> findWorstMonth(List<SalesData> salesData) {
 
 		return salesData.stream().max(Comparator.comparingInt(SalesData::getSales));

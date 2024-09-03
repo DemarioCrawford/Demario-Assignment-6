@@ -1,5 +1,5 @@
 import java.time.YearMonth;
-	//testing to see if changes are being made in this class
+	
 public class SalesData {
 	YearMonth date;
 	Integer sales;
@@ -26,6 +26,7 @@ public class SalesData {
 	public String toString() {
 		return "SalesData [date=" + date + ", sales=" + sales + "]";
 	}
-	//testing
+	
+	
 	
 }
