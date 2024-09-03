@@ -1,27 +1,25 @@
 import java.time.LocalDate;
+import java.time.YearMonth;
 
 public class SalesData {
-	private LocalDate date;
-	private int sales;
-
-	public SalesData(LocalDate date, int sales) {
+	YearMonth date;
+	Integer sales;
+	
+	public SalesData(YearMonth date, Integer sales) {
 		this.date = date;
 		this.sales = sales;
 	}
-
-	public LocalDate getDate() {
+	
+	public YearMonth getDate() {
 		return date;
 	}
-
-	public void setDate(LocalDate date) {
+	public void setDate(YearMonth date) {
 		this.date = date;
 	}
-
-	public int getSales() {
+	public Integer getSales() {
 		return sales;
 	}
-
-	public void setSales(int sales) {
+	public void setSales(Integer sales) {
 		this.sales = sales;
 	}
 
@@ -29,5 +27,6 @@ public class SalesData {
 	public String toString() {
 		return "SalesData [date=" + date + ", sales=" + sales + "]";
 	}
-
+	
+	
 }
