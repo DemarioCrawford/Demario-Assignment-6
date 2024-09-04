@@ -46,17 +46,17 @@ public class TeslaSalesApplication {
 
 		System.out.println("The best month for " + modelName + " was: "
 				+ bestMonth.map(report -> report.getDate().toString()).orElse("N/A"));
-		System.out.println("The worst mothn for " + modelName + " was: "
+		System.out.println("The worst month for " + modelName + " was: "
 				+ worstMonth.map(report -> report.getDate().toString()).orElse("N/A"));
 		System.out.println("--------------------");
 	}
 	//methods for finding best and worst months
-	private static Optional<SalesData> findWorstMonth(List<SalesData> salesData) {
+	private static Optional<SalesData> findBestMonth(List<SalesData> salesData) {
 
 		return salesData.stream().max(Comparator.comparingInt(SalesData::getSales));
 	}
 
-	private static Optional<SalesData> findBestMonth(List<SalesData> salesData) {
+	private static Optional<SalesData> findWorstMonth(List<SalesData> salesData) {
 
 		return salesData.stream().min(Comparator.comparingInt(SalesData::getSales));
 	}
